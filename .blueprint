@@ -1,0 +1,10 @@
+created:
+    - database/migrations/2020_07_09_081924_create_customers_table.php
+    - app/Customer.php
+    - database/factories/CustomerFactory.php
+    - app/Http/Controllers/CustomerController.php
+    - tests/Feature/Http/Controllers/CustomerControllerTest.php
+updated:
+    - routes/web.php
+models:
+    Customer: { first_name: string, last_name: string, identity: string, phone_number: string, birth_place: bistring }

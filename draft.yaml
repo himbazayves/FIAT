@@ -1,0 +1,26 @@
+
+models:
+  Customer:
+    first_name: string
+    last_name: string
+    identity: string
+    phone_number: string
+    birth_place: bistring
+
+controllers:
+  Customer:
+    index:
+      query: all
+      render: customer.index with:customers
+
+    store:
+      validate: first_name,last_name ,identity,phone_number,birth_place
+      save: customer
+     
+      fire: NewCustomer with:customer
+      flash: customer.first_name
+      redirect: customer.index 
+
+
+
+     
